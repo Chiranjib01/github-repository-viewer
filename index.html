@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Github Repository Viewer</title>
+    <script src="https://kit.fontawesome.com/48cb043b75.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- home page view start -->
+        <main class="main">
+            <header>
+                <h1>Github Repository Viewer</h1>
+            </header>
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="username">Enter Username : </label>
+                    <input id="username" type="text" name="username" id="username" placeholder="Enter Username eg. : Chiranjib01"/>
+                    <button id="view" type="submit">View</button>
+                </div>
+                <div class="my-details">
+                    <div class="created-by">
+                        Created By Chiranjib Nath
+                    </div>
+                    <div>Leetcode : <a href="https://leetcode.com/chiranjib_nath" target="_blank">Click Here</a></div>
+                    <div>Codestudio : <a href="https://www.codingninjas.com/studio/profile/3257872b-9df2-4a21-8dbb-9ecafe0dd316" target="_blank">Click Here</a></div>
+                    <div>Email : <a href="mailto:chiranjibnath21313@gmail.com" target="_blank">Click Here</a></div>
+                </div>
+            </div>
+        </main>
+        <!-- home page view end -->
+        
+        <!-- actions start -->
+        <section class="actions">
+
+        </section>
+        <!-- actions end -->
+
+        <!-- repositories page view start -->
+        <section class="repos">
+            
+        </section>
+        <!-- repositories page view end -->
+
+        <!-- pagination start -->
+        <section class="pagination-container">
+            <div class="pagination">
+                <ul id="pagination-ul"></ul>
+            </div>
+        </section>
+        <!-- pagination end -->
+
+    </div>
+
+    <!-- user details template start -->
+    <template id="template-user-details">
+        <div class="user-details">
+            <div class="back-btn-div">
+                <span class="back-btn" id="back-btn"><i class="fas fa-arrow-left"></i> Home</span>
+            </div>
+            <div class="details flex">
+                <div class="profile-pic-container">
+                    <img id="avatar" src="https://via.placeholder.com/400x200" alt="Profile Image" />
+                </div>
+                <div>
+                    <h1 id="uname">User Name</h1>
+                    <p id="user-bio">User Bio</p>
+                    <div>
+                        <p id="user-location">User Location</p>
+                    </div>
+                    <div class="user-twitter">
+                        Twitter : <span id="user-twitter-url">User Twitter Url</span>
+                    </div>
+                    <div class="user-url">
+                        Account : <span id="user-html-url">User Twitter Url</span>
+                    </div>
+                    <div class="total-repos">
+                        Total Repos : <span id="total-repos">Total Repos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <!-- user details template end -->
+
+    <!-- actions template start -->
+    <template id="template-actions">
+        <div class="content">
+            <div class="per-page-div">
+                <input type="text" id="per-page" placeholder="Repositories per page..."/>
+                <button type="button" id="filterBtn">Apply</button>
+            </div>
+            <div class="search-div">
+                    <input type="text" id="search" placeholder="Search repositories..."/>
+                    <button type="button" type="submit" id="searchBtn">Search</button>
+            </div>
+        </div>
+    </template>
+    <!-- actions template end -->
+
+    <!-- repositories template start -->
+    <template id="template-repo-card">
+        <div class="card">
+            <h2 id="repo-name">Repo Name</h2>
+            <p id="repo-description" class="truncate-2">Repo Description</p>
+            <div id="topics">
+                Topics
+            </div>
+        </div>
+    </template>
+    <!-- repositories template end -->
+
+    <!-- no repositories template start -->
+    <template id="template-no-repo">
+        <div class="no-repo">
+            No Repository Found !!
+        </div>
+    </template>
+    <!-- no repositories template end -->
+
+    <!-- js -->
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+    <script src="./main.js"></script>
+</body>
+</html>
